@@ -1,0 +1,124 @@
+====================================================================================================
+Lint Check Report
+Questa Lint  Version 2021.1 4558100 win64 28-Jan-2021
+
+Timestamp            : Wed Jul 16 02:00:18 2025
+Description          : Report for referring checks count, check violations details, and  design information
+Design               : spi_wrapper
+Database             : E:/digital_design_diploma/my_assig_answers/project2/lint.db
+Design Quality Score : 99.1%
+
+Sections:
+   Section 1 : Check Summary
+   Section 2 : Check Details
+   Section 3 : Design Information
+====================================================================================================
+
+
+====================================================================================================
+Section 1 : Check Summary
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+---------------
+| Warning (1) |
+---------------
+  seq_block_has_duplicate_assign          : 1
+
+------------
+| Info (8) |
+------------
+  assigns_mixed                           : 2
+  assigns_mixed_in_always_block           : 1
+  always_signal_assign_large              : 1
+  comment_not_in_english                  : 1
+  multi_ports_in_single_line              : 3
+
+----------------
+| Resolved (0) |
+----------------
+
+
+====================================================================================================
+Section 2 : Check Details
+====================================================================================================
+-------------
+| Error (0) |
+-------------
+
+
+---------------
+| Warning (1) |
+---------------
+
+Check: seq_block_has_duplicate_assign [Category: Rtl Design Style] (1)
+       [Message: Signal is assigned more than once in a sequential block. Signal '<signal>', Module '<module>', File '<file>', Total Assigns Count '<count>', First Assign at Line '<line1>', Second Assign at Line '<line2>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+seq_block_has_duplicate_assign: [uninspected] Signal is assigned more than once in a sequential block. Signal 'received', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Total Assigns Count '2', First Assign at Line '138', Second Assign at Line '144'.
+
+
+
+------------
+| Info (8) |
+------------
+
+Check: assigns_mixed [Category: Simulation] (2)
+       [Message: Signal is assigned with blocking and non-blocking assignments. Signal '<signal>', Module '<module>', File '<file1>', Line '<line1>' and File '<file2>', Line '<line2>'.]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+assigns_mixed: [uninspected] Signal is assigned with blocking and non-blocking assignments. Signal 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '92' and File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '113'.
+
+assigns_mixed: [uninspected] Signal is assigned with blocking and non-blocking assignments. Signal 'parallel_to_serial_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '93' and File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '142'.
+
+
+Check: assigns_mixed_in_always_block [Category: Simulation] (1)
+       [Message: Always block has blocking and non-blocking assignments. Module '<module>', File '<file>', Line '<line1>', Line '<line2>'.]
+--------------------------------------------------------------------------------------------------------------------------------------------
+assigns_mixed_in_always_block: [uninspected] Always block has blocking and non-blocking assignments. Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '112', Line '113'. [RTL ID:a7d45700_00200]
+
+
+Check: always_signal_assign_large [Category: Rtl Design Style] (1)
+       [Message: Always block has more signal assignments than the specified limit. Total count '<count>', Specified limit '<limit>', Module '<module>', File '<file>', Line '<line>'.]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+always_signal_assign_large: [uninspected] Always block has more signal assignments than the specified limit. Total count '8', Specified limit '5', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '85'.
+
+
+Check: comment_not_in_english [Category: Nomenclature Style] (1)
+       [Message: Comments include non-English characters. File '<file>', Line '<line>'.]
+-----------------------------------------------------------------------------------------
+comment_not_in_english: [uninspected] Comments include non-English characters. File 'E:/digital_design_diploma/my_assig_answers/assig4/q3/q3_code.v', Line '29'.
+
+
+Check: multi_ports_in_single_line [Category: Rtl Design Style] (3)
+       [Message: Multiple ports are declared in one line. Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------
+multi_ports_in_single_line: [uninspected] Multiple ports are declared in one line. Module 'singleport_async_ram', File 'E:/digital_design_diploma/my_assig_answers/project2/ram.v', Line '5'.
+
+multi_ports_in_single_line: [uninspected] Multiple ports are declared in one line. Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line '7'.
+    1 more occurrence at: line 9.
+
+multi_ports_in_single_line: [uninspected] Multiple ports are declared in one line. Module 'spi_wrapper', File 'E:/digital_design_diploma/my_assig_answers/project2/top.v', Line '2'.
+
+
+
+----------------
+| Resolved (0) |
+----------------
+
+
+
+====================================================================================================
+Section 3 : Design Information
+====================================================================================================
+-----------
+| Summary |
+-----------
+  Register Bits                           : 57
+  Latch Bits                              : 0
+  User-specified Blackboxes               : 0
+  Inferred Blackboxes                     : 0
+  Empty Modules                           : 0
+  Unresolved Modules                      : 0
+  Hierarchical IPs                        : 0
+

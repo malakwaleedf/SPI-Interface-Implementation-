@@ -1,0 +1,186 @@
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Wed Jul 16 02:00:33 2025 by Malak Waleed on DESKTOP-P95458O
+
+
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Wed Jul 16 01:59:49 2025 by Malak Waleed on DESKTOP-P95458O
+
+
+Command: netlist elaborate
+Command arguments:
+    -zdb E:/digital_design_diploma/my_assig_answers/project2/qcache/DB/zdb_7
+    -tool lint
+    -d spi_wrapper
+    -L work
+
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False)
+
+
+## Elaborating Design...
+Reading MTI mapping for library mapping
+Writing all MTI mappings to vmap output ...
+
+Top level modules:
+	spi_wrapper
+
+Analyzing design...
+-- Loading module z0in_work.spi_wrapper
+
+Performing 102 Lint Checks
+=============================
+
+Lint Stage 1 of 5 - Pre Design Elaboration (4 checks)
+------------------------------------------------------
+-- Loading module z0in_work.spi_slave
+-- Loading module z0in_work.singleport_async_ram
+Optimizing 3 design-units (inlining 0/3 module instances):
+-- Optimizing module z0in_work.spi_slave(fast)
+Lint Stage-1 100% complete [Total Progress -   7%]
+
+Lint Stage 2 of 5 - Design Elaboration (66 checks)
+---------------------------------------------------
+-- Optimizing module z0in_work.singleport_async_ram(fast)
+Lint Stage-2  33% complete (1 out of 3 modules checked) [Total Progress -  11%]
+-- Optimizing module z0in_work.spi_wrapper(fast)
+Lint Stage-2  67% complete (2 out of 3 modules checked) [Total Progress -  17%]
+Optimized design name is zi_opt_def_463702524_1
+Lint Stage-2 100% complete (3 out of 3 modules checked) [Total Progress -  23%]
+End of log Wed Jul 16 02:00:03 2025
+
+
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Wed Jul 16 02:00:06 2025 by Malak Waleed on DESKTOP-P95458O
+
+
+Command: netlist create
+Command arguments:
+    -zdb E:/digital_design_diploma/my_assig_answers/project2/qcache/DB/zdb_7
+    -tool lint
+    -d spi_wrapper
+    -L work
+
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False)
+
+
+## Synthesizing netlist...
+
+Lint Stage 3 of 5 - Post Design Elaboration (17 checks)
+--------------------------------------------------------
+Lint Stage-3  24% complete [Total Progress -  27%]
+Lint Stage-3  47% complete [Total Progress -  29%]
+Lint Stage-3  71% complete [Total Progress -  32%]
+Lint Stage-3  94% complete [Total Progress -  34%]
+Lint Stage-3 100% complete [Total Progress -  35%]
+Analyzing designs.
+Elaborating module 'spi_slave'.
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 113.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 116.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 121.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 124.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 130.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 133.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'parallel_to_serial_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 142.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'serial_to_parallel_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 156.  [elaboration-567]
+        : Elaboration Will continue
+Warning : Both blocking and non-blocking assignments for a variable.  Variable 'parallel_to_serial_count', Module 'spi_slave', File 'E:/digital_design_diploma/my_assig_answers/project2/spi_slave.v', Line 157.  [elaboration-567]
+        : Elaboration Will continue
+Elaborating module 'singleport_async_ram'.
+Elaborating module 'spi_wrapper'.
+
+Lint Stage 4 of 5 - Design Synthesis (2 checks)
+------------------------------------------------
+Lint Stage-4  50% complete [Total Progress -  70%]
+Lint Stage-4 100% complete [Total Progress -  75%]
+
+Lint Stage 5 of 5 - Post Design Synthesis (13 checks)
+------------------------------------------------------
+Lint Stage-5  23% complete [Total Progress -  88%]
+Lint Stage-5  46% complete [Total Progress -  91%]
+Lint Stage-5  69% complete [Total Progress -  95%]
+Lint Stage-5  92% complete [Total Progress -  98%]
+Lint Stage-5 100% complete [Total Progress - 100%]
+
+Lint Checking Completed
+##Time Taken (Synthesis) = 4054.000000 ticks = 4.054000 secs
+
+Summary: 9 Warnings in processing "netlist create"
+End of log Wed Jul 16 02:00:18 2025
+
+
+# Reading design database from E:/digital_design_diploma/my_assig_answers/project2/qcache/LINT/CACHE...completed (0.002 (s)).
+End of log Wed Jul 16 02:00:21 2025
+
+
+# 
+# Questa Static Verification System
+# Version 2021.1 4558100 win64 28-Jan-2021
+
+log created Wed Jul 16 02:00:22 2025 by Malak Waleed on DESKTOP-P95458O
+
+
+Questa Debug flags:
+ 4300:  lint_gui_mode        (Default False)
+
+
+## Applying Lint Waivers...
+
+Message Summary
+---------------------------------------------------------------------------
+Count  Type     Message ID         Summary
+---------------------------------------------------------------------------
+    9  Warning  elaboration-567    Both blocking and non-blocking assignments for a variable.
+
+Final Process Statistics: Max memory 276MB, CPU time 28s, Total time 35s
+End of log Wed Jul 16 02:00:29 2025
+
+
+Result Summary
+-----------------------------------------------------------
+Error (0)
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+Warning (1)
+-----------------------------------------------------------
+  seq_block_has_duplicate_assign          :1
+
+-----------------------------------------------------------
+Info (8)
+-----------------------------------------------------------
+  assigns_mixed                           :2
+  assigns_mixed_in_always_block           :1
+  always_signal_assign_large              :1
+  comment_not_in_english                  :1
+  multi_ports_in_single_line              :3
+
+-----------------------------------------------------------
+Resolved (0)
+-----------------------------------------------------------
+
+# Generating Debug Information...
+
+=================================================================
+To view results in batch
+  E:/digital_design_diploma/my_assig_answers/project2/lint.rpt
+
+To view results in GUI (Beta Version) 
+  qverify E:/digital_design_diploma/my_assig_answers/project2/lint.db
+=================================================================
